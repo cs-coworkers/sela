@@ -1,11 +1,9 @@
 ---
 contract-version: 1.0.0
 date: 2026-08-31
-canonical: shared/composition-contract.md (this file, cw-plugins repo)
-invariant: agent-invariant — byte-identical in every agent plugin's skills/<agent>/references/
-  directory. Verified mechanically by scripts/check-contract-identity.mjs; a divergent copy is a
-  release defect, not a customisation point. Agent-specific facts (name, lane, voice, tool names)
-  live in the plugin's own SKILL.md, never here.
+scope: Agent-invariant composition contract — shared and byte-identical across every
+  Coworkers.Global managed-agent plugin; not a per-agent customisation point. Agent-specific facts
+  (name, lane, voice, tool names) live in the plugin's own SKILL.md, never here.
 ---
 
 # Composition contract — how an embedded agent's answer is built
