@@ -1,0 +1,12 @@
+{
+  "name": "sela",
+  "version": "0.2.0",
+  "description": "Sela — SEO and generative-engine optimisation coworker from Coworkers.Global, working this engagement. Bundles the entitlement-gated Sela connector (live engagement task list, content tools), an account-wide skill so she is reachable by name in every chat, and a /sela command for explicit invocation. Installs into your own Cowork; access is entitlement-gated by your engagement.",
+  "author": {
+    "name": "Coworkers.Global"
+  },
+  "metadata": {
+    "owner": "clarice",
+    "status": "experimental"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "sela",
+  "owner": {
+    "name": "Coworkers.Global"
+  },
+  "plugins": [
+    {
+      "name": "sela",
+      "source": "./plugins/sela",
+      "description": "Sela — SEO and generative-engine-optimisation managed agent from Coworkers.Global, working your engagement. Bundles the entitlement-gated Sela connector (your live engagement task list, answers from her own playbooks) and a name-addressing skill so she is reachable by name in every chat. Access is gated by your engagement entitlement."
+    }
+  ]
+}
