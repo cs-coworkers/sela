@@ -1,17 +1,23 @@
 # Sela — Coworkers.Global managed agent
 
-This is the install source (a Claude **plugin marketplace**) for **Sela**, the SEO / generative-engine-optimisation managed agent that works your engagement.
+Install source for **Sela**, the SEO / generative-engine-optimisation managed agent that works your engagement.
 
-Installing the plugin gives you both halves in one step:
-- the **Sela connector** — her live engagement task list and answers drawn from her own playbooks;
-- the **name-addressing skill** — so "Sela, …" reaches her in any chat.
+Sela is two pieces you add once:
+- the **skill** (this plugin) — so "Sela, …" reaches her in any chat and her answers read in her voice;
+- the **connector** — her live engagement task list and answers drawn from her own playbooks.
 
 ## Install (Cowork / Claude desktop app)
 
-1. **Customize → Plugins → Personal plugins → ＋ → Add from a repository.**
-2. Enter `cs-coworkers/sela` and **Sync**.
-3. Install the **sela** plugin and enable it.
-4. Open a **new** chat and address her: **"Sela, …"**. The first call opens a one-time Google sign-in (consent) for the connector.
+**1 — Add the connector** (this is the sign-in step):
+- Open **https://claude.ai/settings/connectors → Add custom connector**.
+- URL: `https://sela-connector.coworkers-global.workers.dev/mcp`
+- **Connect**, and complete the one-time Google sign-in.
+
+**2 — Add the skill:**
+- **Customize → Plugins → Personal plugins → ＋ → Add from a repository.**
+- Enter `cs-coworkers/sela` and **Sync**, then install the **sela** plugin and enable it.
+
+**3 — Use her:** open a **new** chat and address her — **"Sela, …"**.
 
 Access is gated by your engagement — signing in on a seat without an active entitlement returns a friendly "not active" message, not an error.
 

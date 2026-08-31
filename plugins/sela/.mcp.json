@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "sela": {
-      "type": "http",
-      "url": "https://sela-connector.coworkers-global.workers.dev/mcp"
-    }
-  }
-}
