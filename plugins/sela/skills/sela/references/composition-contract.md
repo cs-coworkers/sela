@@ -1,6 +1,6 @@
 ---
-contract-version: 1.0.0
-date: 2026-08-31
+contract-version: 1.1.0
+date: 2026-09-14
 scope: Agent-invariant composition contract — shared and byte-identical across every
   Coworkers.Global managed-agent plugin; not a per-agent customisation point. Agent-specific facts
   (name, lane, voice, tool names) live in the plugin's own SKILL.md, never here.
@@ -26,7 +26,7 @@ voice, do not recompose or repeat it). Envelope fields:
 | `flags` | The server's deterministic findings (see the table below). You phrase them; you never overrule them. |
 | `material[]` | Curated excerpts from the agent's own published material: `source` (a title, never a path), `as_of`, `excerpt`, `partial`. |
 | `also_on_topic[]` | Titles of eligible material a length budget left out. |
-| `covered_earlier[]` | Titles already served earlier this working session. |
+| `covered_earlier[]` | Titles already sent to this contact recently — possibly in a different conversation; the connector has no concept of "this chat" to compare against. |
 | `task_matches[]` | Engagement task records the message named — the full row. |
 | `open_tasks[]` | The client's open engagement tasks, briefly. |
 | `answers_from_agent[]` | Answers the human agent wrote to earlier questions, delivered on this call. |
@@ -68,9 +68,12 @@ When `material` and `task_matches` are empty, `flags.degrade` says why:
 | `selfScope` | A question about the agent's own coverage. | Answer it directly from `agent.scope`. It is not a decline. |
 | `outOfScope` | No vocabulary overlap with the agent's subject at all. | Say it is outside the agent's lane and offer to loop in the right person on the team. |
 
-`flags.back_reference: true` (with empty `material`): everything that matched was served earlier
-this session — point back to the `covered_earlier` titles rather than repeating them, and invite
-a narrower follow-up, which gets a fresh answer.
+`flags.back_reference: true` (with empty `material`): everything that matched was already sent to
+this contact recently. **Never say "earlier in this conversation" or "in this chat" — the
+connector tracks this per contact over a time window, not per conversation, so the earlier send
+may have been a different chat entirely; claiming otherwise is a false statement the contact can
+catch.** Point back to the `covered_earlier` titles as material already sent, and invite a
+narrower follow-up, which gets a fresh answer.
 
 `flags.frame_refused` can be true alongside a degrade; the frame refusal always wins the
 phrasing.

@@ -1,5 +1,12 @@
 # Sela plugin — changelog
 
+## 0.2.1 — 2026-09-14
+
+- Fixed a wording gap: when Sela points back to something already sent to you rather than
+  repeating it, she no longer describes it as "earlier in this conversation" — that already-sent
+  material can come from an earlier chat as easily as the current one, and the old phrasing
+  overstated it.
+
 ## 0.2.0 — 2026-08-31
 
 - Sela now composes each answer from structured engagement data the connector returns — your
